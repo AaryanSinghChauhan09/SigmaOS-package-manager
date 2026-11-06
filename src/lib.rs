@@ -27,3 +27,6 @@ impl Component for PackageManagerComponent {
         else { Err(error::ComponentError::Service("package-manager not running".to_string())) }
     }
 }
+
+pub mod history;
+pub mod resolver;

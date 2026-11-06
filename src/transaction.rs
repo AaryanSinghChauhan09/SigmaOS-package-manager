@@ -31,3 +31,23 @@ impl PackageManagerService {
     pub fn transaction_count(&self) -> usize { self.transactions.len() }
 }
 impl Default for PackageManagerService { fn default() -> Self { Self::new() } }
+
+/// A single package operation recorded in a transaction.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum Op {
+    Install(String),
+    Remove(String),
+    Upgrade(String, String),
+}
+
+/// A recorded transaction used by the history log.
+#[derive(Debug, Clone)]
+pub struct Transaction {
+    pub ops: Vec<Op>,
+}
+
+impl Transaction {
+    pub fn new(ops: Vec<Op>) -> Self {
+        Self { ops }
+    }
+}
