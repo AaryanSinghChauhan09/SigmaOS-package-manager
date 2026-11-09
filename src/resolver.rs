@@ -1,5 +1,5 @@
 use crate::error::PackageManagerError;
-use std::collections::{HashMap, HashSet, VecDeque};
+use std::collections::{HashMap, HashSet};
 
 /// A simple in-memory package repository entry.
 #[derive(Debug, Clone)]

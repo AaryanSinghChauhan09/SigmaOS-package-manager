@@ -8,3 +8,8 @@ description = "SigmaOS package-manager component inspired by Linux Mint / Omarch
 [lib]
 name = "sigmaos_package_manager"
 path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1.0.104"
+serde = { version = "1.0.229", features = ["derive"] }
+thiserror = "2.0.21"

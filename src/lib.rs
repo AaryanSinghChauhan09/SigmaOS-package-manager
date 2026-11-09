@@ -69,6 +69,16 @@ impl Registry {
     pub fn is_empty(&self) -> bool { self.items.is_empty() }
 }
 
+pub mod backend;
+pub mod config;
+pub mod engine;
+pub mod error;
+pub mod history;
+pub mod journal;
+pub mod resolver;
+pub mod service;
+pub mod transaction;
+
 #[cfg(test)]
 mod tests {
     use super::*;
