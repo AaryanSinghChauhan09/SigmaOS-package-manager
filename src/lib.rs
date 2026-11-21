@@ -320,6 +320,11 @@ pub mod service;
 pub mod transaction;
 
 #[cfg(test)]
+pub mod sigmapackagemanager;
+pub mod sigmapackagemanager2;
+pub mod sigmapkg;
+
+#[cfg(test)]
 mod tests {
     use super::*;
 
